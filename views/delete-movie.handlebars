@@ -1,0 +1,17 @@
+<h1>Delete Movie</h1>
+<p>Are you sure you want to delete the following movie?</p>
+
+<ul>
+    <li><strong>Title:</strong> {{movie.Title}}</li>
+    <li><strong>Year:</strong> {{movie.Year}}</li>
+    <li><strong>Released:</strong> {{movie.Released}}</li>
+    <li><strong>Genre:</strong> {{movie.Genre}}</li>
+    <li><strong>Director:</strong> {{movie.Director}}</li>
+    <li><strong>Language:</strong> {{movie.Language}}</li>
+    <li><strong>Production:</strong> {{movie.Production}}</li>
+</ul>
+
+<form action="/delete-movie/{{movie.Movie_ID}}" method="POST">
+    <button type="submit">Yes, Delete</button>
+    <button type="button" onclick="window.history.back()">Cancel</button>
+</form>

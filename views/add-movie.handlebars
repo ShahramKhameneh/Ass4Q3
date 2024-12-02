@@ -1,0 +1,46 @@
+<h1>Add New Movie</h1>
+
+{{#if error}}
+    <p style="color: red;">{{error}}</p>
+{{/if}}
+
+<form action="/movies" method="POST">
+    <label for="movieId">Movie ID:</label>
+    <input type="number" id="movieId" name="Movie_ID" value="{{nextMovieID}}" readonly>
+    <br>
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="Title" placeholder="Enter movie title" required>
+    <br>
+
+    <label for="year">Year:</label>
+    <input type="number" id="year" name="Year" placeholder="Enter release year" required>
+    <br>
+
+    <label for="released">Released:</label>
+    <input type="date" id="released" name="Released" required>
+    <br>
+
+    <label for="genre">Genre:</label>
+    <input type="text" id="genre" name="Genre" placeholder="Enter genre (e.g., Action, Drama)" required>
+    <br>
+
+    <label for="director">Director:</label>
+    <input type="text" id="director" name="Director" placeholder="Enter director's name" required>
+    <br>
+
+    <label for="language">Language:</label>
+    <input type="text" id="language" name="Language" placeholder="Enter movie language" required>
+    <br>
+
+    <label for="production">Production:</label>
+    <input type="text" id="production" name="Production" placeholder="Enter production house" required>
+    <br>
+
+    <label for="poster">Poster URL:</label>
+    <input type="url" id="poster" name="Poster" placeholder="Enter URL for movie poster">
+    <br>
+
+    <button type="submit">Add Movie</button>
+    <button type="button" onclick="window.history.back()">Cancel</button>
+</form>

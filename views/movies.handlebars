@@ -1,0 +1,30 @@
+<h1>Movies</h1>
+
+<form action="/search" method="GET">
+    <input type="text" name="query" placeholder="Search by Title or Movie ID" required>
+    <button type="submit">Search</button>
+</form>
+
+{{#if message}}
+    <p style="color: red;">{{message}}</p>
+{{/if}}
+
+{{#if movies.length}}
+<ul>
+    {{#each movies}}
+    <li>
+        <img 
+            src="{{Poster}}" 
+            alt="{{Title}} poster" 
+            style="width:30px; height:40px;" 
+            onerror="this.onerror=null;this.src='/images/NOPIC.jpg'">
+        <strong>{{this.Title}}</strong>
+        <a href="/movies/{{this.Movie_ID}}">View Details</a> | 
+        <a href="/edit-movie/{{this.Movie_ID}}">Edit</a> | 
+        <a href="/delete-movie/{{this.Movie_ID}}">Delete</a>
+    </li>
+    {{/each}}
+</ul>
+{{else}}
+<p>No movies found. <a href="/add-movie">Add a movie</a></p>
+{{/if}}

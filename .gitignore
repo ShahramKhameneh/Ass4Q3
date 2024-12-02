@@ -1,0 +1,8 @@
+node_modules/
+.env
+.credentials
+.vercel/
+build/
+dist/
+.DS_Store
+.vscode/

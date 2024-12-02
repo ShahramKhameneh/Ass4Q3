@@ -1,0 +1,29 @@
+<h1>Edit Movie</h1>
+
+<form action="/edit-movie/{{movie.Movie_ID}}" method="POST">
+
+    <label for="movieId">Movie ID:</label>
+    <input type="text" id="movieId" name="Movie_ID" value="{{movie.Movie_ID}}" readonly>
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="Title" value="{{movie.Title}}" required>
+
+    <label for="year">Year:</label>
+    <input type="number" id="year" name="Year" value="{{movie.Year}}" required>
+
+    <label for="genre">Genre:</label>
+    <input type="text" id="genre" name="Genre" value="{{movie.Genre}}" required>
+
+    <label for="director">Director:</label>
+    <input type="text" id="director" name="Director" value="{{movie.Director}}" required>
+
+    <label for="language">Language:</label>
+    <input type="text" id="language" name="Language" value="{{movie.Language}}" required>
+
+    <label for="production">Production:</label>
+    <input type="text" id="production" name="Production" value="{{movie.Production}}" required>
+
+    <button type="submit">Save Changes</button>
+</form>
+
+<button onclick="window.history.back()">Cancel</button>
